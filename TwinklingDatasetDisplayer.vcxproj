@@ -79,6 +79,7 @@
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
@@ -106,6 +107,7 @@
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
@@ -131,6 +133,7 @@
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
@@ -158,6 +161,7 @@
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
@@ -173,33 +177,19 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="sources\DopplerBasics\CFDataAmplitudeAnalyzer.cpp" />
-    <ClCompile Include="sources\DopplerBasics\CFM\MaskCriteria.cpp" />
     <ClCompile Include="sources\DopplerBasics\Utils\NeutralizeTissueMotion.cpp" />
-    <ClCompile Include="sources\DopplerBasics\CFDataPhaseAnalyzer.cpp" />
     <ClCompile Include="sources\DopplerBasics\CFM\CFDataPhaseAnalyzerCFM.cpp" />
-    <ClCompile Include="sources\DopplerBasics\CFM\CFDataPhaseAnalyzerTwinkling.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="sources\DopplerBasics\Display\ColorFlowPalettes.cpp" />
     <ClCompile Include="sources\DopplerBasics\Display\DuplexDisplayer.cpp" />
-    <ClCompile Include="sources\DopplerBasics\FrameAcquisitionBuffer.cpp" />
-    <ClCompile Include="sources\DopplerBasics\Utils\PhaseAnalyzerTimers.cpp" />
-    <ClCompile Include="sources\DopplerBasics\Unknown\DopplerDataDisplayAdditional.cpp" />
     <ClCompile Include="sources\DopplerBasics\CFM\WallFilters\WallFilters.cpp" />
     <ClCompile Include="sources\DopplerBasics\CFM\WallFilters\WallFiltersInteractive.cpp" />
     <ClCompile Include="sources\DopplerBasics\CFM\WallFilters\WallFiltersInterface.cpp" />
     <ClCompile Include="sources\RFDataImport\S500_CFMFrameSet.cpp" />
     <ClCompile Include="sources\RFDataImport\S500_CFMParamFileData.cpp" />
     <ClCompile Include="sources\RFDataImport\S500_CFMRawDataDisplay.cpp" />
-    <ClCompile Include="sources\CFMModesDetailedTest.cpp" />
     <ClCompile Include="sources\DopplerBasics\Display\DisplayDopplerData.cpp" />
     <ClCompile Include="sources\DummyHypothesis.cpp" />
     <ClCompile Include="sources\SetOfPulses.cpp" />
-    <ClCompile Include="sources\SimulateSignal.cpp" />
     <ClCompile Include="sources\TwinklingDatasetDisplayer.cpp" />
     <ClCompile Include="pre.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
