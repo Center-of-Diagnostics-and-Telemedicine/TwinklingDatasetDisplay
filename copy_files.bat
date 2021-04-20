@@ -1,18 +1,5 @@
-copy ..\CommonSources\DopplerBasics\CFM\CFDataPhaseAnalyzerCFM.h sources\DopplerBasics\CFM\CFDataPhaseAnalyzerCFM.h
-copy ..\CommonSources\DopplerBasics\CFM\CFDataPhaseAnalyzerCFM.cpp sources\DopplerBasics\CFM\CFDataPhaseAnalyzerCFM.cpp 
-copy ..\CommonSources\DopplerBasics\CFDataPhaseAnalyzer.cpp sources\DopplerBasics\CFDataPhaseAnalyzer.cpp 
-copy ..\CommonSources\DopplerBasics\CFDataPhaseAnalyzer.h sources\DopplerBasics\CFDataPhaseAnalyzer.h
-copy ..\CommonSources\DopplerBasics\Display\DisplayDopplerData.h sources\DopplerBasics\Display\DisplayDopplerData.h
-copy ..\CommonSources\DopplerBasics\Display\DisplayDopplerData.cpp sources\DopplerBasics\Display\DisplayDopplerData.cpp
-
-copy ..\CommonSources\DopplerBasics\Display\ColorFlowPalettes.h sources\DopplerBasics\Display\ColorFlowPalettes.h
-copy ..\CommonSources\DopplerBasics\Display\ColorFlowPalettes.cpp sources\DopplerBasics\Display\ColorFlowPalettes.cpp
-
 copy ..\DopplerTest\DopplerTest\sources\DummyHypothesis.h sources\DummyHypothesis.h
 copy ..\DopplerTest\DopplerTest\sources\DummyHypothesis.cpp sources\DummyHypothesis.cpp
-
-copy ..\CommonSources\DopplerBasics\Display\DuplexDisplayer.h sources\DopplerBasics\Display\DuplexDisplayer.h
-copy ..\CommonSources\DopplerBasics\Display\DuplexDisplayer.cpp sources\DopplerBasics\Display\DuplexDisplayer.cpp
 
 copy ..\CommonSources\DopplerBasics\Utils\NeutralizeTissueMotion.h sources\DopplerBasics\Utils\NeutralizeTissueMotion.h
 copy ..\CommonSources\DopplerBasics\Utils\NeutralizeTissueMotion.cpp sources\DopplerBasics\Utils\NeutralizeTissueMotion.cpp
@@ -30,7 +17,7 @@ copy ..\CommonSources\RFDataImport\S500_CFMRawDataDisplay.h sources\RFDataImport
 copy ..\CommonSources\RFDataImport\S500_CFMRawDataDisplay.cpp sources\RFDataImport\S500_CFMRawDataDisplay.cpp
 
 copy ..\DopplerTest\DopplerTest\sources\SetOfPulses.h sources\SetOfPulses.h
-copy ..\DopplerTest\DopplerTest\sources\SetOfPulses.h sources\SetOfPulses.cpp
+copy ..\DopplerTest\DopplerTest\sources\SetOfPulses.cpp sources\SetOfPulses.cpp
 
 copy ..\CommonSources\DopplerBasics\CFM\WallFilters\WallFilters.h sources\DopplerBasics\CFM\WallFilters\WallFilters.h
 copy ..\CommonSources\DopplerBasics\CFM\WallFilters\WallFilters.cpp sources\DopplerBasics\CFM\WallFilters\WallFilters.cpp
@@ -51,3 +38,10 @@ copy ..\CommonSources\DopplerBasics\FrameAcquisitionBuffer.cpp sources\DopplerBa
 copy ..\CommonSources\DopplerBasics\CFMModes.h sources\DopplerBasics\CFMModes.h
 
 copy ..\CommonSources\DopplerBasics\Utils\PhaseAnalyzerTimers.h sources\DopplerBasics\Utils\PhaseAnalyzerTimers.h
+
+copy ..\CommonSources\DopplerBasics\CFDataPhaseAnalyzer.h sources\DopplerBasics\CFDataPhaseAnalyzer.h
+
+copy ..\DopplerTest\DopplerTest\sources\SimulateSignal.h sources\SimulateSignal.h
+copy ..\DopplerTest\DopplerTest\sources\SimulateSignal.cpp sources\SimulateSignal.cpp
+
+

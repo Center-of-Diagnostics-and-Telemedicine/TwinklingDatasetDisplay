@@ -3,7 +3,7 @@
 
 //#include "WallFilters.h"
 //#include "KarhunenLoeve.h"
-//#include <DopplerBasics/CFDataPhaseAnalyzer.h>
+#include <DopplerBasics/CFDataPhaseAnalyzer.h>
 
 XRAD_BEGIN
 
