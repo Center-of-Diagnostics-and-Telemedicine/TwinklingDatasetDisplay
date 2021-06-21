@@ -177,15 +177,10 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="sources\DopplerBasics\Utils\NeutralizeTissueMotion.cpp" />
-    <ClCompile Include="sources\DopplerBasics\CFM\WallFilters\WallFilters.cpp" />
-    <ClCompile Include="sources\DopplerBasics\CFM\WallFilters\WallFiltersInteractive.cpp" />
-    <ClCompile Include="sources\DopplerBasics\CFM\WallFilters\WallFiltersInterface.cpp" />
     <ClCompile Include="sources\RFDataImport\S500_CFMFrameSet.cpp" />
     <ClCompile Include="sources\RFDataImport\S500_CFMParamFileData.cpp" />
     <ClCompile Include="sources\RFDataImport\S500_CFMRawDataDisplay.cpp" />
     <ClCompile Include="sources\DummyHypothesis.cpp" />
-    <ClCompile Include="sources\SetOfPulses.cpp" />
     <ClCompile Include="pre.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

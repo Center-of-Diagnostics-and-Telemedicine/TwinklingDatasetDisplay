@@ -4,13 +4,13 @@
 #include <RFDataImport/S500_CFMFrameSet.h>
 #include <RFDataImport/S500_CFMRawDataDisplay.h>
 
-#include <DopplerBasics/CFM/WallFilters/WallFiltersInteractive.h>
+//#include <DopplerBasics/CFM/WallFilters/WallFiltersInteractive.h>
 
 // тесты универсальных методов доплерографии
 //#include "CFMModesDetailedTest.h"
 
 // локальные тесты тонкостей алгоритмов, довольно беспорядочные
-#include "SetOfPulses.h"
+//#include "SetOfPulses.h"
 #include "DummyHypothesis.h"
 #include "SimulateSignal.h"
 
@@ -37,7 +37,7 @@ void	ChooseCFAnalysisTask(S500_CFMFrameSet &frames)
 	//			MakeButton("CFM Modes detailed test",		cfm_modes_detailed_test),
 	//			MakeButton("Find Blur 1D", 	find_blur_1d),
 	//			MakeButton("Find Blur 2D", 	find_blur_2d),
-				MakeButton("Set of pulses", set_of_pulses),
+			//	MakeButton("Set of pulses", set_of_pulses),
 				MakeButton("End with this file",			exit)
 			});
 
@@ -52,10 +52,10 @@ void	ChooseCFAnalysisTask(S500_CFMFrameSet &frames)
 	// 			case find_blur_2d:
 	// 				CFMMode_find_blur_2D(frames);
 	// 				break;
-				case set_of_pulses:
-					frame_no = GetUnsigned("CFM-frame to display", MakeGUIValue(frames.n_frames / 2, saved_default_value), 0, frames.n_frames - 1);
-					DisplayASetOfPulses(frames, frame_no);
-					break;
+				//case set_of_pulses:
+					//frame_no = GetUnsigned("CFM-frame to display", MakeGUIValue(frames.n_frames / 2, saved_default_value), 0, frames.n_frames - 1);
+					//DisplayASetOfPulses(frames, frame_no);
+				//	break;
 				case exit:
 					throw canceled_operation("Exit button");
 					break;
@@ -66,6 +66,8 @@ void	ChooseCFAnalysisTask(S500_CFMFrameSet &frames)
 	catch(quit_application){ throw; }
 	catch(...) { Error(GetExceptionString()); }
 }
+
+
 
 void RawDataProcessingMenu(S500_CFMFrameSet &frames)
 {
@@ -82,7 +84,6 @@ void RawDataProcessingMenu(S500_CFMFrameSet &frames)
 			auto answer = Decide(L"Choose option", 
 				{ 
 				MakeButton(L"Display", e_display),
-				MakeButton(L"Analyze",  e_analyze), 
 				MakeButton("End with this file", e_exit)
 			});
 
@@ -91,9 +92,7 @@ void RawDataProcessingMenu(S500_CFMFrameSet &frames)
 			case e_display:
 				DisplayCFMFrameSet(frames, L"CFM frames");
 				break;
-			case e_analyze:
-				ChooseCFAnalysisTask(frames);
-				break;
+
 			default:
 				throw canceled_operation("End with this file");
 			}
@@ -127,7 +126,7 @@ S500_CFMFrameSet GetS500Frames()
 
 
 
-
+/*
 
 void	WallFilterFrequencyResponse()
 {
@@ -161,7 +160,7 @@ void	WallFilterFrequencyResponse()
 	}
 }
 
-
+*/
 
 int xrad::xrad_main(int, char** const)
 {
@@ -172,7 +171,8 @@ int xrad::xrad_main(int, char** const)
 		size_t	answer(0);
 		while (true)
 		{
-			answer = Decide("Choose source", { "Process raw S500 data", "Process simulated signal", "Wall filter frequency response", "Test dummy hypothesis", "Exit" });
+			//answer = Decide("Choose source", { "Process raw S500 data", "Process simulated signal", "Wall filter frequency response", "Test dummy hypothesis", "Exit" });
+			answer = Decide("Choose source", { "Process raw S500 data", "Process simulated signal", "Test dummy hypothesis", "Exit" });
 			switch (answer)
 			{
 				case 0:
@@ -200,11 +200,6 @@ int xrad::xrad_main(int, char** const)
 				break;
 
 				case 2:
-					WallFilterFrequencyResponse();
-					break;
-				break;
-
-				case 3:
 					DummyHypothesis();
 					break;
 
