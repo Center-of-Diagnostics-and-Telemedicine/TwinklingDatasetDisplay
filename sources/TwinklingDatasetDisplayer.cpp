@@ -29,7 +29,7 @@ void RawDataProcessingMenu(S500_CFMFrameSet &frames)
 			switch (answer)
 			{
 			case e_display:
-				DisplayCFMFrameSet(frames, L"CFM frames");
+				DisplayCFMFrameSet(frames, L"Raw data frames");
 				break;
 
 			default:
