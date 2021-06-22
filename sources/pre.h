@@ -29,7 +29,7 @@ XRAD_END
 #include <XRADGUI/Sources/GUI/Graphset.h>
 #include <XRADGUI/Sources/GUI/MatrixVectorGUI.h>
 
-#define RUN_CFM_MODES 1
+#define RUN_CFM_MODES 0
 
 #undef __pre_h_first
 

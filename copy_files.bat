@@ -1,9 +1,6 @@
 copy ..\DopplerTest\DopplerTest\sources\DummyHypothesis.h sources\DummyHypothesis.h
 copy ..\DopplerTest\DopplerTest\sources\DummyHypothesis.cpp sources\DummyHypothesis.cpp
 
-copy ..\DopplerTest\DopplerTest\pre.h sources\pre.h
-copy ..\DopplerTest\DopplerTest\pre.cpp pre.cpp
-
 copy ..\CommonSources\RFDataImport\S500_CFMFrameSet.h sources\RFDataImport\S500_CFMFrameSet.h
 copy ..\CommonSources\RFDataImport\S500_CFMFrameSet.cpp sources\RFDataImport\S500_CFMFrameSet.cpp
 
