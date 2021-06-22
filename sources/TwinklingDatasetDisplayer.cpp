@@ -11,8 +11,8 @@
 
 // локальные тесты тонкостей алгоритмов, довольно беспорядочные
 //#include "SetOfPulses.h"
-#include "DummyHypothesis.h"
-#include "SimulateSignal.h"
+//#include "DummyHypothesis.h"
+//#include "SimulateSignal.h"
 
 XRAD_USING;
 
@@ -172,7 +172,8 @@ int xrad::xrad_main(int, char** const)
 		while (true)
 		{
 			//answer = Decide("Choose source", { "Process raw S500 data", "Process simulated signal", "Wall filter frequency response", "Test dummy hypothesis", "Exit" });
-			answer = Decide("Choose source", { "Process raw S500 data", "Process simulated signal", "Test dummy hypothesis", "Exit" });
+			//answer = Decide("Choose source", { "Process raw S500 data", "Process simulated signal", "Test dummy hypothesis", "Exit" });
+			answer = Decide("Choose source", { "Process raw S500 data", "Exit" });
 			switch (answer)
 			{
 				case 0:
@@ -186,22 +187,6 @@ int xrad::xrad_main(int, char** const)
 					catch(...){ Error(GetExceptionStringOrRethrow()); }
 				}
 				break;
-
-				case 1:
-				{
-					try
-					{
-						S500_CFMFrameSet frames = SimulateSignal();
-						RawDataProcessingMenu(frames);
-					}
-					catch(canceled_operation){}
-					catch(...){ Error(GetExceptionStringOrRethrow()); }
-				}
-				break;
-
-				case 2:
-					DummyHypothesis();
-					break;
 
 				default:
 					throw canceled_operation("");

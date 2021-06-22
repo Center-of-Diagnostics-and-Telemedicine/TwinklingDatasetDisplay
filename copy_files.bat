@@ -1,5 +1,3 @@
-copy ..\DopplerTest\DopplerTest\sources\DummyHypothesis.h sources\DummyHypothesis.h
-copy ..\DopplerTest\DopplerTest\sources\DummyHypothesis.cpp sources\DummyHypothesis.cpp
 
 copy ..\CommonSources\RFDataImport\S500_CFMFrameSet.h sources\RFDataImport\S500_CFMFrameSet.h
 copy ..\CommonSources\RFDataImport\S500_CFMFrameSet.cpp sources\RFDataImport\S500_CFMFrameSet.cpp
@@ -20,8 +18,5 @@ copy ..\CommonSources\DopplerBasics\FrameAcquisitionBuffer.cpp sources\DopplerBa
 copy ..\CommonSources\DopplerBasics\Utils\PhaseAnalyzerTimers.h sources\DopplerBasics\Utils\PhaseAnalyzerTimers.h
 
 copy ..\CommonSources\DopplerBasics\CFDataPhaseAnalyzer.h sources\DopplerBasics\CFDataPhaseAnalyzer.h
-
-copy ..\DopplerTest\DopplerTest\sources\SimulateSignal.h sources\SimulateSignal.h
-copy ..\DopplerTest\DopplerTest\sources\SimulateSignal.cpp sources\SimulateSignal.cpp
 
 
