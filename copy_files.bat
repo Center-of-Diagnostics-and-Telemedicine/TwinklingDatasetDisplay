@@ -12,11 +12,3 @@ copy ..\CommonSources\RFDataImport\S500_CFMDataTypes.h sources\RFDataImport\S500
 
 copy ..\CommonSources\RFDataImport\S500_CFMFrameSetParams.h sources\RFDataImport\S500_CFMFrameSetParams.h
 
-copy ..\CommonSources\DopplerBasics\FrameAcquisitionBuffer.h sources\DopplerBasics\FrameAcquisitionBuffer.h
-copy ..\CommonSources\DopplerBasics\FrameAcquisitionBuffer.cpp sources\DopplerBasics\FrameAcquisitionBuffer.cpp
-
-copy ..\CommonSources\DopplerBasics\Utils\PhaseAnalyzerTimers.h sources\DopplerBasics\Utils\PhaseAnalyzerTimers.h
-
-copy ..\CommonSources\DopplerBasics\CFDataPhaseAnalyzer.h sources\DopplerBasics\CFDataPhaseAnalyzer.h
-
-
