@@ -1,6 +1,5 @@
 ﻿#include "pre.h"
 
-
 #include <RFDataImport/S500_CFMFrameSet.h>
 #include <RFDataImport/S500_CFMRawDataDisplay.h>
 
@@ -21,7 +20,7 @@ void RawDataProcessingMenu(S500_CFMFrameSet &frames)
 		while (true)
 		{
 			auto answer = Decide(L"Choose option", 
-				{ 
+			{ 
 				MakeButton(L"Display", e_display),
 				MakeButton("End with this file", e_exit)
 			});
