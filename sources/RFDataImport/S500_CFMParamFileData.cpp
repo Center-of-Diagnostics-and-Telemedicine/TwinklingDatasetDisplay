@@ -55,7 +55,6 @@ int	GetParam(const string &key, const vector<string>& v, int default_value = 0)
 		if(count) return result;
 	}
 	return default_value;
-	//throw runtime_error("Parameter not found");
 }
 
 void	S500_CFMParamFileData::Init(const wstring &filename)

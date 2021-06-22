@@ -13,7 +13,7 @@ S500_CFMFrameSet::S500_CFMFrameSet( const S500_CFMParamFileData &in_params, size
 		parent(in_params),
 		file_params(in_params),
 		start_frame(in_start_frame),
-		n_frames(range(in_end_frame-in_start_frame+1, 0, in_params.NumOfFrames)),//+1 нужно, т.к. передается номер последнего действительного кадра, т.е. для кадров с 1 до 1 должно быть 1 кадр, а не 0
+		n_frames(range(in_end_frame-in_start_frame+1, 0, in_params.NumOfFrames)),
 		frame_size(in_params.RawFrameSize),
 		n_b_rays(in_params.NumOfBBeams),
 		n_b_samples(in_params.SizeofBBeamAtSamples),
@@ -101,7 +101,6 @@ void	S500_CFMFrameSet::ReadFrame(shared_cfile file, size_t frame_no, bool unswee
 		file.read_numbers(header_buffer, ioUI8);
 		file.read_numbers(cfm_slice.row(target_row_no), ioComplexI32_LE);
 	}
-	//написать подробный комментарий
 }
 
 XRAD_END

@@ -92,20 +92,16 @@ void	DisplayCFMDetailed(const cfm_container_t& in_cfm_frames, size_t n_cfm_shots
 			"Exit"
 			}
 		);
-		//quick_iv(n_frames, n_cfm_beams, n_cfm_shots, n_cfm_samples)
+
 		switch (answer)
 		{
 		case e_everything:
-			//			DisplayMathFunction3D(cfm_frames, title + " / CFM-frames");
 			DisplayMathFunction3D(cfm_frames, title + " / CFM-frames", sco_cfm);
-			//			Использование скан-конвертера здесь себя совершенно не оправдывает, нужно разбираться, почему так
 			break;
 		case e_fixed_frame:
 		{
 			fixed_frame = GetUnsigned("Frame no", long(fixed_frame), 0, long(n_frames - 1));
 			cfm_shot_frames.GetSubset(subset, { fixed_frame, slice_mask(2), slice_mask(0), slice_mask(1) });
-			// порядок следования срезов такой, чтобы по умолчанию выдавалась
-			// анимация по номеру выстрела, по горизонтали лучи, по вертикали отсчеты
 			DisplayMathFunction3D(subset, title + ssprintf(" / Fixed frame #%d", fixed_frame));
 		}
 		break;
@@ -113,8 +109,6 @@ void	DisplayCFMDetailed(const cfm_container_t& in_cfm_frames, size_t n_cfm_shots
 		{
 			fixed_ray = GetUnsigned("ray no", long(fixed_ray), 0, long(n_cfm_beams - 1));
 			cfm_shot_frames.GetSubset(subset, { slice_mask(2), fixed_ray, slice_mask(0), slice_mask(1) });
-			// порядок следования срезов такой, чтобы по умолчанию выдавалась
-			// анимация по номеру выстрела, по горизонтали кадры, по вертикали отсчеты
 			DisplayMathFunction3D(subset, title + ssprintf(" / Fixed ray #%d", fixed_ray));
 		}
 		break;
@@ -122,8 +116,6 @@ void	DisplayCFMDetailed(const cfm_container_t& in_cfm_frames, size_t n_cfm_shots
 		{
 			fixed_sample = GetUnsigned("sample no", long(fixed_sample), 0, long(n_cfm_samples - 1));
 			cfm_shot_frames.GetSubset(subset, { slice_mask(1), slice_mask(2), slice_mask(0), fixed_sample });
-			// порядок следования срезов такой, чтобы по умолчанию выдавалась анимация
-			// по номеру выстрела, по горизонтали лучи, по вертикали кадры
 			DisplayMathFunction3D(subset, title + ssprintf(" / Fixed sample #%d", fixed_sample));
 		}
 		break;
@@ -131,7 +123,6 @@ void	DisplayCFMDetailed(const cfm_container_t& in_cfm_frames, size_t n_cfm_shots
 		{
 			fixed_shot = GetUnsigned("shot no", long(fixed_shot), 0, long(n_cfm_shots - 1));
 			cfm_shot_frames.GetSubset(subset, { slice_mask(0), slice_mask(1), fixed_shot, slice_mask(2) });
-			// порядок следования срезов такой, чтобы правильно работал сканконвертер
 			DisplayMathFunction3D(subset, title + ssprintf(" / Fixed shot #%d", fixed_shot), sco_cfm);
 		}
 		break;
